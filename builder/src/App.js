@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Members from './CMPNT/Members';
+import NewForm from './CMPNT/NewForm';
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
   return (
     <div className="App">
       <Members members={members}/>
+      <NewForm addNewMember={addNewMember}/>
     </div>
   );
 }
