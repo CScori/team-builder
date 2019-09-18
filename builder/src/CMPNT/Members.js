@@ -3,9 +3,9 @@ import { Card, CardTitle, CardText, Row, Col } from 'reactstrap';
 import styled from 'styled-components'
 
 const Hold = styled.div`
-background: 134b66;
+background: darkblue;
 opacity: 0.8;
-color: e8dbd6;
+color: white;
 border-radius: 0 25px;
 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12), 0 5px 2px rgba(0, 0, 0, 0.24);
 width: 100%;

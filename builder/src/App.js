@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import Members from './CMPNT/Members';
 import NewForm from './CMPNT/NewForm';
+import styled from 'styled-components'
+
+const Hold = styled.div`
+background: black;
+height: 600px;
+padding-top: 20px;
+
+`
 
 function App() {
 
@@ -32,10 +40,10 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <Hold className="App">
       <Members members={members}/>
       <NewForm addNewMember={addNewMember}/>
-    </div>
+    </Hold>
   
   );
 }

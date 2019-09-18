@@ -1,4 +1,18 @@
 import React, { useState } from 'react'
+import styled from 'styled-components'
+
+const Bar = styled.div`
+background: darkgrey;
+opacity: 0.8;
+color: white;
+border-radius: 25px;
+width: 20%;
+padding: 10px;
+margin: 16px auto;
+text-align: center;
+display: flex;
+justify-content: space-evenly;
+`
 
 const NewForm = props => {
     const [mem, setMem] = useState({
@@ -18,7 +32,9 @@ const NewForm = props => {
     }
 
     return (
+        <Bar>
         <form onSubmit={submit}>
+            <div>
             <label htmlFor='person'>Name</label>
             <input
                 id='person'
@@ -27,6 +43,8 @@ const NewForm = props => {
                 value={mem.name}
                 onChange={handler}
             />
+            </div>
+            <div>
             <label htmlFor='email'>Email</label>
             <input
                 id='email'
@@ -35,6 +53,8 @@ const NewForm = props => {
                 value={mem.email}
                 onChange={handler}
             />
+            </div>
+            <div>
               <label htmlFor='role'>Role</label>
             <input
                 id='role'
@@ -43,9 +63,11 @@ const NewForm = props => {
                 value={mem.role}
                 onChange={handler}
             />
+            </div>
             <button type='submit'>Add Member</button>
 
       </form>
+      </Bar>
                     )
                 }
                 
