@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect }from 'react'
 import { Card, CardTitle, CardText, Row, Col, Button } from 'reactstrap';
 import styled from 'styled-components'
 
@@ -17,6 +17,10 @@ text-align: center;
 
 
 const Members = props => {
+
+    useEffect(props => {
+        props.memberEdit = props.member
+    })
 
     return (
         <Hold>

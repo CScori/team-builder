@@ -11,7 +11,17 @@ padding-top: 20px;
 `
 
 function App() {
-  
+  const [memberEdit, SetMemberEdit] = useState({name: '',
+  email: '',
+  role: ''})
+
+  const editor = memberEdit => {
+    const edi = {
+
+    }
+    setMemberEdit([...members, memberEdit])
+  }
+
   const [members, setMembers] = useState([
     //members will be passed as props in member.js
     //setmember used in the new mwmber --> 
@@ -40,8 +50,8 @@ function App() {
 
   return (
     <Hold className="App">
-      <Members members={members}/>
-      <NewForm addNewMember={addNewMember} />
+      <Members members={members} memberEdit={memberEdit}/>
+      <NewForm addNewMember={addNewMember}/>
     </Hold>
   
   );
