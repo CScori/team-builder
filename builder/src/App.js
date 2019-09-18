@@ -5,14 +5,13 @@ import styled from 'styled-components'
 
 const Hold = styled.div`
 background: black;
-height: 600px;
+height: 1000px;
 padding-top: 20px;
 
 `
 
 function App() {
-
-
+  
   const [members, setMembers] = useState([
     //members will be passed as props in member.js
     //setmember used in the new mwmber --> 
@@ -42,7 +41,7 @@ function App() {
   return (
     <Hold className="App">
       <Members members={members}/>
-      <NewForm addNewMember={addNewMember}/>
+      <NewForm addNewMember={addNewMember} />
     </Hold>
   
   );

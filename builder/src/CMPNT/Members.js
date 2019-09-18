@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardTitle, CardText, Row, Col } from 'reactstrap';
+import { Card, CardTitle, CardText, Row, Col, Button } from 'reactstrap';
 import styled from 'styled-components'
 
 const Hold = styled.div`
@@ -23,9 +23,10 @@ const Members = props => {
         <Row>{props.members.map(member => (
         <Col sm="6" key={member.id}>
           <Card body>
-            <CardTitle>{member.name}</CardTitle>
-            <CardText>{member.email}</CardText>
-            <CardText>{member.role}</CardText>
+            <CardTitle>Name: {member.name}</CardTitle>
+            <CardText>Email: {member.email}</CardText>
+            <CardText>Role: {member.role}</CardText>
+            <Button>Edit</Button>
           </Card>
         </Col>
             ))}
