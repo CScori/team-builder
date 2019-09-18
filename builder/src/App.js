@@ -15,12 +15,14 @@ function App() {
   email: '',
   role: ''})
 
-  const editor = memberEdit => {
-    const edi = {
-
-    }
-    setMemberEdit([...members, memberEdit])
-  }
+  // const editor = memberEdit => {
+  //     member.id.map(member => {
+  //       name: '',
+  //       role: ''
+  //     })
+  //   }
+  //   setMemberEdit([...members, memberEdit])
+  // }
 
   const [members, setMembers] = useState([
     //members will be passed as props in member.js

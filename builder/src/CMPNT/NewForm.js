@@ -33,7 +33,8 @@ const NewForm = props => {
 
     return (
         <Bar>
-        <form onSubmit={submit}>
+        {/* <form onSubmit={submit} if(!memberEdit)else(newMember)> */}
+        <form onsubmit={submit}>
             <div>
             <label htmlFor='person'>Name</label>
             <input

@@ -18,9 +18,9 @@ text-align: center;
 
 const Members = props => {
 
-    useEffect(props => {
-        props.memberEdit = props.member
-    })
+    // useEffect(props => {
+    //     props.memberEdit = props.member
+    // })
 
     return (
         <Hold>
