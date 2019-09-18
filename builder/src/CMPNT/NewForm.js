@@ -13,7 +13,7 @@ const NewForm = props => {
 
     const submit = e => {
         e.preventDefault();
-        props.ddNewMember(mem)
+        props.addNewMember(mem)
         setMem({name: '', email: '', role: ''})
     }
 
