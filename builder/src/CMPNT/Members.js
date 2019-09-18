@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 
 
-const Form = props => {
+const Members = props => {
 
     return (
         <div>
@@ -19,4 +19,4 @@ const Form = props => {
     )
 }
 
-export default Form
+export default Members

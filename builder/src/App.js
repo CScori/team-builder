@@ -1,24 +1,40 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Members from './CMPNT/Members';
 
 function App() {
+
+
+  const [members, setMembers] = useState([
+    //members will be passed as props in member.js
+    //setmember used in the new mwmber --> 
+    // this sets the first member to add from
+    {
+      id: 1,
+      name: 'Cori',
+      email: 'lambdacori@lambda.edu',
+      role: 'student'
+    }
+  ])
+
+  const addNewMember = member => {
+    //member is a prop for function
+    //new member is the kvp for the newform.js
+    const newMember ={
+      id: Date.now(),
+      name: member.name,
+      email: member.email,
+      role: member.role
+    };
+    setMembers([...members, newMember])
+    //members is being spread to new member
+    //newmember  wiil be created in newform
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Members members={members}/>
     </div>
   );
 }
